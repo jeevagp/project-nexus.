@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spice Route</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="file.png">
+    <!---Linked CSS file--->
+</head>
+
+<body>
+    <div class="full-page">
+        <div id='login-form' class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+                    <button type='button' onclick='register()' class='toggle-btn'>Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id='login' class='input-group-login' action="login.php" method="post">
+                    <input type='email' name="email" class='input-field' placeholder='Email Id' required>
+                    <input type='password' name="password" class='input-field' placeholder='Enter Password' required>
+                    <input type='checkbox' class='check-box'><span>Remember Password</span>
+                    <button type='submit' class='submit-btn'>Log in</button>
+                </form>
+
+                <!-- Registration Form -->
+                <form id='register' class='input-group-register' action="signup.php" method="post">
+                    <input type='text' name="first_name" class='input-field' placeholder='First Name' required>
+                    <input type='text' name="last_name" class='input-field' placeholder='Last Name' required>
+                    <input type='email' name="email" class='input-field' placeholder='Email Id' required>
+                    <input type='password' name="password" class='input-field' placeholder='Enter Password' required>
+                    <input type='password' name="confirm_password" class='input-field' placeholder='Confirm Password' required>
+                    <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+                    <button type='submit' class='submit-btn'>Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById('login');
+        var y = document.getElementById('register');
+        var z = document.getElementById('btn');
+
+        function register() {
+            x.style.left = '-400px';
+            y.style.left = '50px';
+            z.style.left = '110px';
+        }
+
+        function login() {
+            x.style.left = '50px';
+            y.style.left = '450px';
+            z.style.left = '0px';
+        }
+    </script>
+</body>
+
+</html>
